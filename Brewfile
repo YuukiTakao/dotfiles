@@ -1,0 +1,8 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "direnv"
+brew "fish"
+brew "ghq"
+brew "go"
+brew "hub"
+brew "peco"
