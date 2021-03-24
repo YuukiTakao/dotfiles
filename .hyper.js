@@ -27,13 +27,13 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgba(254,128,129,0.4)',
 
     // terminal text color under BLOCK cursor
-    cursorAccentColor: '#000',
+    cursorAccentColor: '#ff8cf0',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: 'BEAM',
+    cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
     cursorBlink: false,
@@ -43,23 +43,29 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#000',
+    backgroundColor: '#000033',
+
+    // opacity: 0.5,/*半透明カラーの透明度*/
+    
+    // filter: blur(8px),/*ぼかし度*/
 
     // terminal selection color
-    selectionColor: 'rgba(248,228,229,0.3)',
+    // selectionColor: 'rgba(248,228,229,0.3)',
 
     // border color (window, tabs)
-    borderColor: '#333',
+    // borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: `
+    `,
 
     // custom CSS to embed in the terminal window
-    termCSS: '',
+    termCSS: `
+  `,
 
     // if you're using a Linux setup which show native menus, set to false
     // default: `true` on Linux, `true` on Windows, ignored on macOS
-    showHamburgerMenu: '',
+    showHamburgerMenu: 'true',
 
     // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
     // additionally, set to `'left'` if you want them on the left, like in Ubuntu
@@ -110,7 +116,9 @@ module.exports = {
     shellArgs: ['--login'],
 
     // for environment variables
-    env: {LANG: 'ja_JP.UTF-8'},
+    env: {
+      LANG: 'ja_JP.UTF-8'
+    },
 
     // set to `false` for no bell
     bell: 'SOUND',
@@ -124,6 +132,11 @@ module.exports = {
     hyperBorder: {
       borderColors: ['#cc6666', '#f0c674'], // 枠の色（2色の間をグラデーション）
       borderWidth: '4px', // 枠の太さ
+    },
+
+    opacity: {
+      focus: 0.9,
+      blur: 0.9,
     }
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
@@ -147,7 +160,11 @@ module.exports = {
     "hyper-tabs-enhanced", // いい感じのタブに
     "hyper-statusline", // 下側にステータスを表示
     "hypercwd", // 新しいタブを開いたときに同じディレクトリへ移動
-    "hyperborder" // ターミナルに枠をつける
+    "hyperborder", // ターミナルに枠をつける
+    "hyper-search",
+    "hyper-opacity"
+    // 'hyperterm-material',
+    // 'hyper-transparent-bg'
   ],
 
   // in development, you can create a directory under
